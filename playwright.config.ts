@@ -1,0 +1,2 @@
+import{defineConfig}from'@playwright/test';
+export default defineConfig({testDir:'./tests',timeout:30000,use:{baseURL:'http://127.0.0.1:5235',viewport:{width:1920,height:1080}},webServer:{command:'tsc -b && vite build --mode test && vite preview --host 127.0.0.1 --port 5235 --strictPort',url:'http://127.0.0.1:5235',reuseExistingServer:false,timeout:60000}});

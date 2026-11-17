@@ -1,0 +1,8 @@
+gymnasium==1.2.1
+stable-baselines3==2.7.0
+sb3-contrib==2.7.0
+torch==2.8.0
+numpy==2.3.3
+
+[test]
+pytest==8.4.2

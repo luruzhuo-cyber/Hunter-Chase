@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: hunter-arena-training
+Version: 1.0.0
+Requires-Python: <3.14,>=3.11
+Requires-Dist: gymnasium==1.2.1
+Requires-Dist: stable-baselines3==2.7.0
+Requires-Dist: sb3-contrib==2.7.0
+Requires-Dist: torch==2.8.0
+Requires-Dist: numpy==2.3.3
+Provides-Extra: test
+Requires-Dist: pytest==8.4.2; extra == "test"
