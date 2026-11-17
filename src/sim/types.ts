@@ -1,0 +1,18 @@
+export type Point = { x: number; y: number };
+export type Cell = 'wall' | 'floor';
+export type RoomKind = 'living'|'bio'|'energy'|'monitoring'|'maintenance'|'quarantine'|'evacuation';
+export type Door = { id:string; position:Point; kind:'normal'|'security'|'oneway'; lockedUntil:number; blockedUntil:number };
+export type Terminal = { id:string; position:Point; active:boolean; progress:number };
+export type FacilityMap = { width:number; height:number; cells:Cell[]; rooms:{id:string;kind:RoomKind;label:string;x:number;y:number;width:number;height:number}[]; doors:Door[]; vents:{id:string;a:Point;b:Point;disabledUntil:number}[]; terminals:Terminal[]; elevator:Point; runnerSpawns:Point[]; hunterSpawn:Point; items:{id:string;kind:'chip'|'decoy'|'barricade';position:Point;taken:boolean}[] };
+export type ActorStatus = 'active'|'downed'|'escaped'|'eliminated'|'missing';
+export type RunnerActor = { id:string; kind:'runner'; profileId:string; position:Point; previous:Point; status:ActorStatus; inventory:string[]; rescueUsed:boolean; downedAt?:number; path:Point[]; action:string; target?:Point; terminalTicks:number; route:Point[] };
+export type HunterMode = 'patrol'|'investigate'|'search'|'chase'|'intercept'|'expand';
+export type HunterActor = { id:'hunter';kind:'hunter';profileId:'hunter';position:Point;previous:Point;status:'active';inventory:[];rescueUsed:false;path:Point[];action:string;mode:HunterMode;memory:{lastSeen?:Point;targetId?:string;lastStimulusTick:number;exitIdleTicks:number};route:Point[] };
+export type Actor = RunnerActor|HunterActor;
+export type Phase = 'exploration'|'alert'|'evacuation'|'finished';
+export type ProtocolKind = 'outage'|'door-reset'|'vent-purge'|'surveillance-leak'|'isolation'|'elevator-migration';
+export type GameEvent = { tick:number;type:string;actorIds:string[];position?:Point;payload:Record<string,unknown> };
+export type WorldState = { seed:number;tick:number;phase:Phase;map:FacilityMap;actors:Actor[];events:GameEvent[];sounds:{position:Point;strength:number;createdAt:number;kind:string}[];tracks:{position:Point;actorId:string;createdAt:number}[];protocols:{kind:ProtocolKind;warningTick:number;activeTick:number;applied:boolean}[];elevatorOpenedAt?:number;finishedAt?:number };
+export type MatchResult = { seed:number;durationSeconds:number;escaped:string[];eliminated:string[];missing:string[] };
+export type ReplayFileV1 = {version:1;seed:number;config:{tickMs:number};map:FacilityMap;events:GameEvent[];result:MatchResult};
+export type { KinematicState, SkillId, SurvivalActor, TerrainKind, Vec2 } from './survival/types';

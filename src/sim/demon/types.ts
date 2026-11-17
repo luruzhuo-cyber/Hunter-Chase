@@ -1,0 +1,10 @@
+import type {SurvivalWorld} from '../survival/world';
+import type {SurvivalMap} from '../survival/map';
+import type {Vec2} from '../survival/types';
+import type {PursuitState} from '../pursuit';
+export type DemonItem='sprint'|'decoy'|'phase'|'lock';
+export type DemonPickup={id:string;roomId:string;position:Vec2;type:DemonItem;collectedBy?:string};
+export type DemonEvent={id:number;type:'selection'|'summon'|'pickup'|'item-use'|'capture'|'transition'|'stage-start'|'last-two'|'closure-warning'|'closure'|'finished';elapsedTick:number;stage:1|2;actorId?:string;item?:DemonItem;alive?:number;reason?:string};
+export type DemonClosure={id:string;cells:number[];warnedAt:number;closed:boolean;skipped?:boolean};
+export type DemonStats={stage1Survivors?:number;stage1ChaseTicks?:number;captures:number;itemUses:Record<DemonItem,number>;escapes:Record<DemonItem,number>;winnerId?:string;reason?:'last-survivor'|'all-eliminated'|'timeout'};
+export type DemonMatch={seed:number;phase:'selection'|'chase'|'transition'|'finished';stage:1|2;elapsedTicks:number;phaseTicks:number;world:SurvivalWorld;pursuit:PursuitState;mapIds:string[];maps:SurvivalMap[];pickups:DemonPickup[];inventory:Record<string,DemonItem|undefined>;events:DemonEvent[];stats:DemonStats;entry:Vec2;roomGoals:Record<string,Vec2>;sprints:Record<string,number>;decoy?:{position:Vec2;expiresTick:number;heard?:boolean};doorPassages:Record<string,{id:string;tick:number}>;closures:DemonClosure[];pendingEscapes:{actorId:string;item:DemonItem;checkTick:number}[];hunterSpeedRatio:number};

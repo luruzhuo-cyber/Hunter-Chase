@@ -1,0 +1,8 @@
+import {describe,it,expect} from 'vitest';
+import {createDemonMatch,stepDemonMatch} from './index';
+import {generateSurvivalMap} from '../survival/map';
+const make=()=>{const m=createDemonMatch([generateSurvivalMap(1),generateSurvivalMap(2)],42);m.phase='chase';m.world.map.terrain=m.world.map.terrain.map(()=> 'floor');m.world.map.doors=[];m.world.hunter.kinematics.position={x:5.5,y:5.5};m.inventory={};return m};
+describe('pickups use physically resolved positions',()=>{
+ it('does not give a pickup to an already captured runner',()=>{let m=make();m.world.runners.forEach((r,i)=>r.kinematics.position={x:i===0?5.6:30.5+i*2,y:5.5});m.pickups=[{id:'test',roomId:'room',position:{x:5.6,y:5.5},type:'sprint'}];m=stepDemonMatch(m);expect(m.world.runners[0]!.active).toBe(false);expect(m.pickups[0]!.collectedBy).toBeUndefined();expect(m.inventory['01']).toBeUndefined();expect(m.events.some(e=>e.type==='pickup')).toBe(false)});
+ it('does not collect beyond a terminal winner actual impact-time stop',()=>{let m=make();m.world.runners.slice(0,7).forEach(r=>r.kinematics.position={x:5.5,y:5.5});const r=m.world.runners[7]!;r.kinematics.position={x:7.5,y:5.5};r.kinematics.velocity={x:2.8,y:0};m.pursuit.runners[r.id]={goal:{x:20.5,y:5.5},path:[{x:20.5,y:5.5}],plannedAt:0,seenTick:0,choices:0,stuck:0};m.pickups=[{id:'test',roomId:'room',position:{x:8.55,y:5.5},type:'sprint'}];m=stepDemonMatch(m);expect(m.stats.winnerId).toBe('08');expect(m.world.runners[7]!.kinematics.position).toEqual({x:7.5,y:5.5});expect(m.pickups[0]!.collectedBy).toBeUndefined();expect(m.events.some(e=>e.type==='pickup')).toBe(false)});
+});

@@ -1,0 +1,403 @@
+{
+  "schemaVersion": 1,
+  "seeds": [
+    42,
+    1701
+  ],
+  "maxTicks": 128,
+  "episodeCount": 2,
+  "hunterPolicy": "ppo-g0001-hunter",
+  "runnerPolicy": "..\\public\\models\\smoke\\runner-policy.json",
+  "hunterAllEliminatedRate": 0.0,
+  "meanAllEliminatedSeconds": null,
+  "timeouts": 2,
+  "discoveryCount": 4,
+  "lostTargetCount": 4,
+  "hunterBlockedMoveTicks": 0,
+  "runners": [
+    {
+      "id": "01",
+      "meanSurvivalSeconds": 12.79999999999997,
+      "medianSurvivalSeconds": 12.79999999999997,
+      "lastSurvivorRate": 0.0,
+      "skillUseRate": 1.0,
+      "meanSkillTimeSeconds": 0.1,
+      "meanPostSkillSurvivalSeconds": 12.69999999999997,
+      "captures": 0,
+      "blockedMoveTicks": 1,
+      "exposureEliminations": 0
+    },
+    {
+      "id": "02",
+      "meanSurvivalSeconds": 12.79999999999997,
+      "medianSurvivalSeconds": 12.79999999999997,
+      "lastSurvivorRate": 0.0,
+      "skillUseRate": 1.0,
+      "meanSkillTimeSeconds": 0.2,
+      "meanPostSkillSurvivalSeconds": 12.59999999999997,
+      "captures": 0,
+      "blockedMoveTicks": 1,
+      "exposureEliminations": 0
+    },
+    {
+      "id": "03",
+      "meanSurvivalSeconds": 12.79999999999997,
+      "medianSurvivalSeconds": 12.79999999999997,
+      "lastSurvivorRate": 0.0,
+      "skillUseRate": 0.5,
+      "meanSkillTimeSeconds": 9.9,
+      "meanPostSkillSurvivalSeconds": 2.89999999999997,
+      "captures": 0,
+      "blockedMoveTicks": 4,
+      "exposureEliminations": 0
+    },
+    {
+      "id": "04",
+      "meanSurvivalSeconds": 12.79999999999997,
+      "medianSurvivalSeconds": 12.79999999999997,
+      "lastSurvivorRate": 0.0,
+      "skillUseRate": 0.0,
+      "meanSkillTimeSeconds": null,
+      "meanPostSkillSurvivalSeconds": null,
+      "captures": 0,
+      "blockedMoveTicks": 2,
+      "exposureEliminations": 0
+    },
+    {
+      "id": "05",
+      "meanSurvivalSeconds": 12.79999999999997,
+      "medianSurvivalSeconds": 12.79999999999997,
+      "lastSurvivorRate": 0.0,
+      "skillUseRate": 1.0,
+      "meanSkillTimeSeconds": 0.30000000000000004,
+      "meanPostSkillSurvivalSeconds": 12.499999999999972,
+      "captures": 0,
+      "blockedMoveTicks": 0,
+      "exposureEliminations": 0
+    },
+    {
+      "id": "06",
+      "meanSurvivalSeconds": 12.79999999999997,
+      "medianSurvivalSeconds": 12.79999999999997,
+      "lastSurvivorRate": 0.0,
+      "skillUseRate": 0.5,
+      "meanSkillTimeSeconds": 4.1000000000000005,
+      "meanPostSkillSurvivalSeconds": 8.69999999999997,
+      "captures": 0,
+      "blockedMoveTicks": 1,
+      "exposureEliminations": 0
+    },
+    {
+      "id": "07",
+      "meanSurvivalSeconds": 12.79999999999997,
+      "medianSurvivalSeconds": 12.79999999999997,
+      "lastSurvivorRate": 0.0,
+      "skillUseRate": 1.0,
+      "meanSkillTimeSeconds": 0.25,
+      "meanPostSkillSurvivalSeconds": 12.54999999999997,
+      "captures": 0,
+      "blockedMoveTicks": 3,
+      "exposureEliminations": 0
+    },
+    {
+      "id": "08",
+      "meanSurvivalSeconds": 12.79999999999997,
+      "medianSurvivalSeconds": 12.79999999999997,
+      "lastSurvivorRate": 0.0,
+      "skillUseRate": 1.0,
+      "meanSkillTimeSeconds": 0.1,
+      "meanPostSkillSurvivalSeconds": 12.69999999999997,
+      "captures": 0,
+      "blockedMoveTicks": 0,
+      "exposureEliminations": 0
+    }
+  ],
+  "episodes": [
+    {
+      "seed": 42,
+      "result": {
+        "winnerKind": "none",
+        "reason": "timeout",
+        "tick": 128,
+        "rankings": [
+          {
+            "id": "01",
+            "survivalSeconds": 12.79999999999997,
+            "exposure": 0,
+            "insideZone": true
+          },
+          {
+            "id": "02",
+            "survivalSeconds": 12.79999999999997,
+            "exposure": 0,
+            "insideZone": true
+          },
+          {
+            "id": "03",
+            "survivalSeconds": 12.79999999999997,
+            "exposure": 0,
+            "insideZone": true
+          },
+          {
+            "id": "04",
+            "survivalSeconds": 12.79999999999997,
+            "exposure": 0,
+            "insideZone": true
+          },
+          {
+            "id": "05",
+            "survivalSeconds": 12.79999999999997,
+            "exposure": 0,
+            "insideZone": true
+          },
+          {
+            "id": "06",
+            "survivalSeconds": 12.79999999999997,
+            "exposure": 0,
+            "insideZone": true
+          },
+          {
+            "id": "07",
+            "survivalSeconds": 12.79999999999997,
+            "exposure": 0,
+            "insideZone": true
+          },
+          {
+            "id": "08",
+            "survivalSeconds": 12.79999999999997,
+            "exposure": 0,
+            "insideZone": true
+          }
+        ]
+      },
+      "discoveryCount": 4,
+      "lostTargetCount": 4,
+      "hunterBlockedMoveTicks": 0,
+      "runners": [
+        {
+          "id": "01",
+          "survivalSeconds": 12.79999999999997,
+          "active": true,
+          "blockedMoveTicks": 1,
+          "eliminationReason": null,
+          "skillUsed": true,
+          "skillTick": 1,
+          "postSkillSurvivalSeconds": 12.69999999999997
+        },
+        {
+          "id": "02",
+          "survivalSeconds": 12.79999999999997,
+          "active": true,
+          "blockedMoveTicks": 1,
+          "eliminationReason": null,
+          "skillUsed": true,
+          "skillTick": 3,
+          "postSkillSurvivalSeconds": 12.49999999999997
+        },
+        {
+          "id": "03",
+          "survivalSeconds": 12.79999999999997,
+          "active": true,
+          "blockedMoveTicks": 0,
+          "eliminationReason": null,
+          "skillUsed": true,
+          "skillTick": 99,
+          "postSkillSurvivalSeconds": 2.89999999999997
+        },
+        {
+          "id": "04",
+          "survivalSeconds": 12.79999999999997,
+          "active": true,
+          "blockedMoveTicks": 1,
+          "eliminationReason": null,
+          "skillUsed": false,
+          "skillTick": null,
+          "postSkillSurvivalSeconds": null
+        },
+        {
+          "id": "05",
+          "survivalSeconds": 12.79999999999997,
+          "active": true,
+          "blockedMoveTicks": 0,
+          "eliminationReason": null,
+          "skillUsed": true,
+          "skillTick": 2,
+          "postSkillSurvivalSeconds": 12.599999999999971
+        },
+        {
+          "id": "06",
+          "survivalSeconds": 12.79999999999997,
+          "active": true,
+          "blockedMoveTicks": 1,
+          "eliminationReason": null,
+          "skillUsed": true,
+          "skillTick": 41,
+          "postSkillSurvivalSeconds": 8.69999999999997
+        },
+        {
+          "id": "07",
+          "survivalSeconds": 12.79999999999997,
+          "active": true,
+          "blockedMoveTicks": 1,
+          "eliminationReason": null,
+          "skillUsed": true,
+          "skillTick": 3,
+          "postSkillSurvivalSeconds": 12.49999999999997
+        },
+        {
+          "id": "08",
+          "survivalSeconds": 12.79999999999997,
+          "active": true,
+          "blockedMoveTicks": 0,
+          "eliminationReason": null,
+          "skillUsed": true,
+          "skillTick": 1,
+          "postSkillSurvivalSeconds": 12.69999999999997
+        }
+      ]
+    },
+    {
+      "seed": 1701,
+      "result": {
+        "winnerKind": "none",
+        "reason": "timeout",
+        "tick": 128,
+        "rankings": [
+          {
+            "id": "01",
+            "survivalSeconds": 12.79999999999997,
+            "exposure": 0,
+            "insideZone": true
+          },
+          {
+            "id": "02",
+            "survivalSeconds": 12.79999999999997,
+            "exposure": 0,
+            "insideZone": true
+          },
+          {
+            "id": "03",
+            "survivalSeconds": 12.79999999999997,
+            "exposure": 0,
+            "insideZone": true
+          },
+          {
+            "id": "04",
+            "survivalSeconds": 12.79999999999997,
+            "exposure": 0,
+            "insideZone": true
+          },
+          {
+            "id": "05",
+            "survivalSeconds": 12.79999999999997,
+            "exposure": 0,
+            "insideZone": true
+          },
+          {
+            "id": "06",
+            "survivalSeconds": 12.79999999999997,
+            "exposure": 0,
+            "insideZone": true
+          },
+          {
+            "id": "07",
+            "survivalSeconds": 12.79999999999997,
+            "exposure": 0,
+            "insideZone": true
+          },
+          {
+            "id": "08",
+            "survivalSeconds": 12.79999999999997,
+            "exposure": 0,
+            "insideZone": true
+          }
+        ]
+      },
+      "discoveryCount": 0,
+      "lostTargetCount": 0,
+      "hunterBlockedMoveTicks": 0,
+      "runners": [
+        {
+          "id": "01",
+          "survivalSeconds": 12.79999999999997,
+          "active": true,
+          "blockedMoveTicks": 0,
+          "eliminationReason": null,
+          "skillUsed": true,
+          "skillTick": 1,
+          "postSkillSurvivalSeconds": 12.69999999999997
+        },
+        {
+          "id": "02",
+          "survivalSeconds": 12.79999999999997,
+          "active": true,
+          "blockedMoveTicks": 0,
+          "eliminationReason": null,
+          "skillUsed": true,
+          "skillTick": 1,
+          "postSkillSurvivalSeconds": 12.69999999999997
+        },
+        {
+          "id": "03",
+          "survivalSeconds": 12.79999999999997,
+          "active": true,
+          "blockedMoveTicks": 4,
+          "eliminationReason": null,
+          "skillUsed": false,
+          "skillTick": null,
+          "postSkillSurvivalSeconds": null
+        },
+        {
+          "id": "04",
+          "survivalSeconds": 12.79999999999997,
+          "active": true,
+          "blockedMoveTicks": 1,
+          "eliminationReason": null,
+          "skillUsed": false,
+          "skillTick": null,
+          "postSkillSurvivalSeconds": null
+        },
+        {
+          "id": "05",
+          "survivalSeconds": 12.79999999999997,
+          "active": true,
+          "blockedMoveTicks": 0,
+          "eliminationReason": null,
+          "skillUsed": true,
+          "skillTick": 4,
+          "postSkillSurvivalSeconds": 12.39999999999997
+        },
+        {
+          "id": "06",
+          "survivalSeconds": 12.79999999999997,
+          "active": true,
+          "blockedMoveTicks": 0,
+          "eliminationReason": null,
+          "skillUsed": false,
+          "skillTick": null,
+          "postSkillSurvivalSeconds": null
+        },
+        {
+          "id": "07",
+          "survivalSeconds": 12.79999999999997,
+          "active": true,
+          "blockedMoveTicks": 2,
+          "eliminationReason": null,
+          "skillUsed": true,
+          "skillTick": 2,
+          "postSkillSurvivalSeconds": 12.599999999999971
+        },
+        {
+          "id": "08",
+          "survivalSeconds": 12.79999999999997,
+          "active": true,
+          "blockedMoveTicks": 0,
+          "eliminationReason": null,
+          "skillUsed": true,
+          "skillTick": 1,
+          "postSkillSurvivalSeconds": 12.69999999999997
+        }
+      ]
+    }
+  ]
+}

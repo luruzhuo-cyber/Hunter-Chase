@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "MaskablePPO",
+  "observationSchemaVersion": 1,
+  "actionSchemaVersion": 1,
+  "seed": 1701,
+  "maxTicks": 3600,
+  "status": "smoke-or-training-only",
+  "evaluated": false,
+  "generations": [
+    {
+      "generation": 1,
+      "requestedStepsPerSide": 2048,
+      "runner": {
+        "timesteps": 2048,
+        "opponentPool": [],
+        "teammatePool": [],
+        "parity": {
+          "count": 100,
+          "maxAbsoluteError": 9.522154800767346e-08,
+          "tolerance": 1e-05
+        },
+        "elapsedSeconds": 12.23499999998603,
+        "meanStepReward": 0.0070395510037997155,
+        "rewardCurve": [
+          0.007781250220432412,
+          0.007000000216066837,
+          0.007000000216066837,
+          0.007000000216066837,
+          0.007000000216066837,
+          0.007000000216066837,
+          0.007000000216066837,
+          0.007000000216066837,
+          0.007000000216066837,
+          0.007000000216066837,
+          0.007000000216066837,
+          0.007000000216066837,
+          0.007000000216066837,
+          0.007000000216066837,
+          0.007000000216066837,
+          0.0068515628154273145
+        ],
+        "episodes": []
+      },
+      "hunter": {
+        "timesteps": 2048,
+        "opponentPool": [
+          "C:\\Users\\gao\\Documents\\ChatGPT\\\u8d5b\u535a\u56da\u7b3c-\u89c6\u9891AI\\.worktrees\\hunter-rl-survival\\apps\\hunter-arena\\public\\models\\smoke\\checkpoints\\generation-0001\\runner-policy.json"
+        ],
+        "teammatePool": [],
+        "parity": {
+          "count": 100,
+          "maxAbsoluteError": 8.91753969833875e-08,
+          "tolerance": 1e-05
+        },
+        "elapsedSeconds": 11.14000000001397,
+        "meanStepReward": 0.0008731599547144864,
+        "rewardCurve": [
+          6.69887348747622e-06,
+          -0.00019018572077200702,
+          -9.189734385328663e-05,
+          -0.00019403035078813247,
+          9.165812144829033e-06,
+          -0.00047643180249590245,
+          -0.00010364335634349686,
+          -9.824934546998065e-05,
+          0.015109132509522283,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "episodes": []
+      }
+    }
+  ]
+}
